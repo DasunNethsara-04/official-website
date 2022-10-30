@@ -1,0 +1,665 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	
+}
+
+.banner
+{
+	width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar
+{
+    width: 80%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+.logo
+{
+    width: 30%;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.navbar ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+}
+
+.navbar ul li::after
+{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #defd59;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after
+{
+    width: 100%;
+}
+
+div .fa
+{
+	display: none;
+}
+.content
+{
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-70%);
+    text-align: center;
+    color: #fff;
+}
+
+.title
+{
+    font-size: 250%;
+    line-height: 100px;
+    font-weight: bold;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content p
+{
+    margin: 30px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: sans-serif;
+}
+
+.content h1
+{
+	font-size: 100px;
+}
+
+button
+{
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 1px;
+    border: 2px solid #defd59;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(to right, transparent 50%, #defd59 50px);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+
+}
+
+button:hover
+{
+    background-position: right;
+    color: #000;
+}
+
+.slider
+{
+    color: #ff0;
+    margin-left: 12px;
+    box-sizing: border-box;
+    animation: slider 6s linear infinite;
+}
+@keyframes slider
+{   
+	0% { margin-top: -400px; }
+    5% { margin-top: -200px; }
+    30% { margin-top: -200px; }
+    35% { margin-top: 0px; }
+    65% { margin-top: 0px; }
+    75% { margin-top: 200px; }
+    100% { margin-top: 200px; }
+}
+
+@media (max-width: 700px) 
+{
+	.content p
+	{
+		margin: 13px;
+		line-height: 25px;
+		font-family: sans-serif;
+		justify-content:center;
+	}
+	.content h1
+	{
+		font-size: 60px;
+	}
+
+	.navbar ul li
+	{
+		display: block;
+	}
+
+	.navbar ul
+	{
+		position: fixed;
+		background: #f44336;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200%;
+		text-align: left;
+		z-index: 2;
+		padding: 30px;
+		transition: 1s;
+	}
+
+	div .fa
+	{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+}
+
+/* 	Download Secion 	*/
+.downloads
+{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+	font-family: 'poppins', sans-serif;
+}
+
+h1
+{
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.downloads p
+{
+	color: #777;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.row
+{
+	margin-top: 5%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.app-col
+{
+	flex-basis: 31%;
+	background: #fff3f3;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 56px 12px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+h3
+{
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+}
+
+.app-col:hover
+{
+	box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 700px) {
+	.row
+	{
+		flex-direction: column;
+	}
+}
+
+/* 	Languages Secion 	*/
+.languages
+{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 50px;
+	font-family: 'poppins', sans-serif;
+}
+
+.languages p
+{
+	color: #777;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.lang-col
+{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.lang-col img
+{
+	width: 90%;
+	cursor: pointer;
+}
+
+.layer
+{
+	background: transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+
+.layer:hover
+{
+	background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3
+{
+	width: 100%;
+	font-weight: 500;
+	color: #fff;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.layer:hover h3
+{
+	bottom: 49%;
+	opacity: 1;
+}
+
+.enroll
+{
+	font-family: 'poppins', sans-serif;
+	margin: 100px auto;
+	width: 80%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.363),rgba(0, 0, 0, 0.431)), url('images/bg2.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.enroll h1
+{
+	color: #fff;
+	margin-bottom: 40px;
+	padding: 0;
+}
+
+.enroll button a
+{
+	text-decoration: none;
+	color: #fff;
+}
+
+.enroll button a:hover
+{
+	background-position: right;
+    color: #000;
+}
+
+@media (max-width:700px) {
+	.enroll h1
+	{
+		font-size: 24px;
+	}
+}
+
+.footer
+{
+	width: 100%;
+	font-family: 'poppins', sans-serif;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.footer h4
+{
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+}
+
+
+
+/*		About us Page		*/
+.sub-header
+{
+	height: 50vh;
+	width: 100%;
+	font-family: 'poppins', sans-serif;
+	background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/bg3.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+}
+
+.sub-header h1
+{
+	margin-top: 100px;
+}
+
+.about-us
+{
+	width: 80%;
+	margin: auto;
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+
+.about-col
+{
+	flex-basis: 48%;
+	padding: 30px 2px;
+}
+
+.about-col img
+{
+	width: 100%;
+}
+
+.about-col h1
+{
+	padding-top: 0;
+	font-family: 'poppins', sans-serif;
+}
+
+.about-col p
+{
+	padding: 15px 0 25px;
+	font-family: sans-serif;
+}
+
+
+.about-col ul
+{
+	padding: 5px;
+	margin-left: 10%;
+}
+
+.about-col ul li
+{
+	font-family: 'poppins', sans-serif;
+}
+
+.about-us button a
+{
+	text-decoration: none;
+	color: #000;
+}
+
+.about-us button a:hover
+{
+	background-position: right;
+}
+
+@media (max-width: 700px)
+{
+	.sub-header h1
+	{
+		margin-top: 5px;
+	}
+
+	.about-col h1
+	{
+		padding-top: 0;
+		font-size: 25px;
+		font-family: 'poppins', sans-serif;
+	}
+}
+
+.about-pro
+{
+	flex-basis: 48%;
+	padding: 30px 2px;
+	width: 80%;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+.about-pro ul
+{
+	padding: 10px;
+	font-family: 'poppins', sans-serif;
+	margin-left: 10%;
+	font-size: 15px;
+}
+
+.about-pro img
+{
+	width: 90%;
+}
+
+/*		Contact Page		*/
+
+.contact-us
+{
+	width: 80%;
+	font-family: 'poppins', sans-serif;
+	margin: auto;
+}
+
+.contact-col
+{
+	flex-basis: 48%;
+	margin-bottom: 30px;
+}
+
+.contact-col div
+{
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.contact-col div .fa
+{
+	font-size: 28px;
+	color: #f44336;
+	margin: 10px;
+	margin-right: 30px;
+}
+
+.contact-col div p
+{
+	padding: 0;
+}
+
+.contact-col div h4
+{
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #555;
+	font-weight: 400;
+}
+
+.contact-col button
+{
+	color: #000;
+}
+
+.contact-col input, .contact-col textarea
+{
+	width: 100%;
+	padding: 15px;
+	margin-bottom: 17px;
+	outline: none;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+	.contact-us
+	{
+		width: 80%;
+		font-family: 'poppins', sans-serif;
+		margin: 5px;
+	}
+}
+
+.tutorials
+{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+	font-family: 'poppins', sans-serif;
+}
+
+.tutorials h1
+{
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.tutorials p
+{
+	color: #777;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.tutorials table
+{
+	padding: 5%;
+}
+
+.tutorials td
+{
+	padding: 10px;
+	text-align: center;
+}
+
+.tutorials td img
+{
+	width: 60%;
+}
+
+.tutorials td button
+{
+	color:#000;
+	border: 2px solid #59d7fd;
+	background: linear-gradient(to right, transparent 50%, #59d7fd 50px);
+	/*background: linear-gradient(to right, transparent 50%, #defd59 50px);*/
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+}
+
+.tutorials td button:hover
+{
+    background-position: right;
+    color: #000;
+}
+
+.download
+{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+	font-family: 'poppins', sans-serif;
+}
+
+.download table
+{
+	padding: 5%;
+}
+
+.download td
+{
+	padding: 10px;
+	
+}
+
+.download td img
+{
+	width: 70%;
+}
+
+.download td button
+{
+	color:#000;
+	border: 2px solid #fd59fd;
+	background: linear-gradient(to right, transparent 50%, #fd59fd 50px);
+	/*background: linear-gradient(to right, transparent 50%, #defd59 50px);*/
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+}
+
+.download td button:hover
+{
+    background-position: right;
+    color: #000;
+}
+
+.download h1
+{
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.download p
+{
+	color: #777;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 10px;
+}
